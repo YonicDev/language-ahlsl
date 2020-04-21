@@ -1,6 +1,6 @@
 {
   "name": "language-ahlsl",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Atom language support for Anime Image Game Engine's AHLSL",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,10 +10,12 @@
     "language"
   ],
   "repository": {
-    "type":"git",
-    "url":"https://github.com/YonicDev/language-ahlsl.git"
+    "type": "git",
+    "url": "https://github.com/YonicDev/language-ahlsl.git"
   },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "author": "YonicStudios",
   "license": "MIT"
 }
