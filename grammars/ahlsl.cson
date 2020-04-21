@@ -1,0 +1,70 @@
+'scopeName': 'source.ahlsl.standard'
+'name': 'AHLSL Script'
+'filetypes': ['hlsl','aigehls',"ahlsl"]
+'foldingStartMarker': '^\\[\\w+\\]',
+'foldingEndMarker': '^\\[\\w+\\]'
+'patterns': [
+    {
+        'begin':'\\/\\/',
+        'end':'\\n',
+        'name':'comment.line.double-slash.ahlsl'
+    },
+    {
+        'begin':'\'',
+        'end':'\'',
+        'name':'string.quoted.single.ahlsl'
+        'patterns': [
+            {
+                'match':'\\\\.'
+                'name':'constant.character.escape'
+            }
+        ]
+    },
+    {
+        'begin':'"',
+        'end':'"',
+        'name':'string.quoted.double.ahlsl'
+        'patterns': [
+            {
+                'match':'\\\\.'
+                'name':'constant.character.escape.ahlsl'
+            }
+        ]
+    },
+    {
+        'begin':'#',
+        'end':'\\n',
+        'name':'comment.block.section.ahlsl'
+    },
+    {
+        'begin':'\\[',
+        'end':'\\]',
+        'name':'storage.function'
+    },
+    {
+        'begin': '<',
+        'end': '>',
+        'name':'entity.name.function',
+        'patterns': [
+            {'include':'$self'}
+        ]
+    }
+    {
+        'begin': '\\(',
+        'end': '\\)',
+        'patterns': [
+            {
+                'match':'\\[\\w+\\]',
+                'name':'variable.parameter.ahlsl'
+            }
+            {
+                'include':'$self'
+            }
+        ]
+        'name':'meta.function.ahlsl'
+    }
+    {
+        'match':'\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))\\b',
+        'name':'constant.numeric.ahlsl'
+    },
+]
